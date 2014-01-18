@@ -25,7 +25,7 @@
 <!-- ENDIF -->
 </div>
 
-<br clear="all" /><br />
+<br clear="all" />
 
 <div id="pagecontent">
 
@@ -33,8 +33,8 @@
 	<tr>
 		<td align="{S_CONTENT_FLOW_BEGIN}" valign="middle" nowrap="nowrap">
 		<!-- IF not S_IS_BOT -->
-			<!-- IF S_DISPLAY_POST_INFO --><a href="{U_POST_NEW_TOPIC}">{POST_IMG}</a>&nbsp;<!-- ENDIF -->
-			<!-- IF S_DISPLAY_REPLY_INFO --><a href="{U_POST_REPLY_TOPIC}">{REPLY_IMG}</a><!-- ENDIF -->
+			<!-- IF S_DISPLAY_POST_INFO --><a class="button" href="{U_POST_NEW_TOPIC}">neues Thema</a>&nbsp;<!-- ENDIF -->
+			<!-- IF S_DISPLAY_REPLY_INFO --><a class="button" href="{U_POST_REPLY_TOPIC}">antworten</a><!-- ENDIF -->
 		<!-- ENDIF -->
 		</td>
 		<!-- IF TOTAL_POSTS -->
@@ -307,8 +307,8 @@
 	<tr>
 		<td align="{S_CONTENT_FLOW_BEGIN}" valign="middle" nowrap="nowrap">
 		<!-- IF not S_IS_BOT -->
-			<!-- IF S_DISPLAY_POST_INFO --><a href="{U_POST_NEW_TOPIC}">{POST_IMG}</a>&nbsp;<!-- ENDIF -->
-			<!-- IF S_DISPLAY_REPLY_INFO --><a href="{U_POST_REPLY_TOPIC}">{REPLY_IMG}</a><!-- ENDIF -->
+			<!-- IF S_DISPLAY_POST_INFO --><a class="button" href="{U_POST_NEW_TOPIC}">neues Thema</a>&nbsp;<!-- ENDIF -->
+			<!-- IF S_DISPLAY_REPLY_INFO --><a class="button" href="{U_POST_REPLY_TOPIC}">antworten</a><!-- ENDIF -->
 		<!-- ENDIF -->
 		</td>
 		<!-- IF TOTAL_POSTS -->
@@ -329,19 +329,6 @@
 <!-- ENDIF -->
 
 <!-- INCLUDE breadcrumbs.html -->
-
-<!-- IF S_DISPLAY_ONLINE_LIST -->
-	<br clear="all" />
-
-	<table class="tablebg" width="100%" cellspacing="1">
-	<tr>
-		<td class="cat"><h4>{L_WHO_IS_ONLINE}</h4></td>
-	</tr>
-	<tr>
-		<td class="row1"><p class="gensmall">{LOGGED_IN_USER_LIST}</p></td>
-	</tr>
-	</table>
-<!-- ENDIF -->
 
 <br clear="all" />
 

@@ -8,13 +8,59 @@
 */
 
 /*child hacks*/
+body p.breadcrumbs {
+  color: #eee;
+  font-size: 23px;
+  font-style: italic;
+  font-weight: normal;
+  left: 3px;
+  margin: 0 0 12px;
+  position: absolute;
+  top: 205px;
+}
+
+body p.breadcrumbs a{
+	color: #eee;
+}
+
+body p.breadcrumbs a:hover{
+	text-decoration: none;
+}
+
+body p.searchbar {
+	padding: 0 0 27px;
+}
+
+body .tablebg {
+  background: none;
+}
+
+body .cat{
+	background: none;
+}
+
+body h4 {
+  background: none repeat scroll 0 0 #FFFFFF;
+  font-size: 22px;
+  margin: 15px;
+}
+
+body .row1 {
+  background-color: #E6F3E3;
+}
+
+body .row2 {
+  background-color: #CFF2C7;
+}
+
 #logodesc {
 	background-color:#000;
-	height:50px;
+	height:48px;
 	position: fixed;
 	top: 0;
 	width:100%;
 	display:block;
+	z-index: 3;
 }
 
 #logodesc .site-title{
@@ -24,7 +70,7 @@
 #logodesc .site-title a{
 	color: #fff;
   display:block;
-  width:300px;
+  width:140px;
   height:48px;
 }
 
@@ -46,8 +92,12 @@ html body{
   background-size:cover;
   -moz-background-size: cover;
   background-position:0 -123px;
-  padding-top:200px;
+  padding-top:230px;
   padding-bottom:120px;
+
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 body #wrapcentre{
@@ -57,7 +107,99 @@ body #wrapcentre{
   background-color: #fff;
   padding: 15px 25px 0;
   margin:0;
+  border-top-right-radius: 60px;
 }
+
+
+/* buttons */
+body .button,
+body a.button,
+  body button,
+  body input[type="submit"],
+  body input[type="file"],
+  body input[type="reset"],
+  body input[type="button"] {
+    background: #eee; /* Old browsers */
+    background: #eee -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
+    background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
+    background: #eee -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Chrome10+,Safari5.1+ */
+    background: #eee -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Opera11.10+ */
+    background: #eee -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* IE10+ */
+    background: #eee linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* W3C */
+    border: 1px solid #aaa;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #444;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: none;
+    text-shadow: 0 1px rgba(255, 255, 255, .75);
+    cursor: pointer;
+    margin-bottom: 3px;
+    line-height: normal;
+    padding: 8px 10px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+  body .button:hover,
+  body button:hover,
+  body input[type="submit"]:hover,
+  body input[type="reset"]:hover,
+  body input[type="button"]:hover {
+    color: #222;
+    background: #ddd; /* Old browsers */
+    background: #ddd -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); /* FF3.6+ */
+    background: #ddd -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.3)), color-stop(100%,rgba(0,0,0,.3))); /* Chrome,Safari4+ */
+    background: #ddd -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Chrome10+,Safari5.1+ */
+    background: #ddd -o-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Opera11.10+ */
+    background: #ddd -ms-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* IE10+ */
+    background: #ddd linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* W3C */
+    border: 1px solid #888;
+    border-top: 1px solid #aaa;
+    border-left: 1px solid #aaa; }
+
+  body .button:active,
+  body button:active,
+  body input[type="submit"]:active,
+  body input[type="reset"]:active,
+  body input[type="button"]:active {
+    border: 1px solid #666;
+    background: #ccc; /* Old browsers */
+    background: #ccc -moz-linear-gradient(top, rgba(255,255,255,.35) 0%, rgba(10,10,10,.4) 100%); /* FF3.6+ */
+    background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.35)), color-stop(100%,rgba(10,10,10,.4))); /* Chrome,Safari4+ */
+    background: #ccc -webkit-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Chrome10+,Safari5.1+ */
+    background: #ccc -o-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Opera11.10+ */
+    background: #ccc -ms-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* IE10+ */
+    background: #ccc linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* W3C */ }
+
+  body .button.full-width,
+  body button.full-width,
+  body input[type="submit"].full-width,
+  body input[type="reset"].full-width,
+  body input[type="button"].full-width {
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center; }
+
+  /* Fix for odd Mozilla border & padding issues */
+  body button::-moz-focus-inner,
+  body input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+
+
+
+
+
+
+
 
 /*menu*/
 #menubar {
@@ -205,13 +347,6 @@ body #wrapfooter a:hover{
 body th{
 	color: #333;
 }
-
-body .dateinfo {
-	color: #fff;
-}
-
-
-
 
 /*copied from childreneyes.css*/
 
