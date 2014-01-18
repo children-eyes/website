@@ -22,7 +22,7 @@ class Child_App{
       add_action('save_post_'.Child_Case::POST_TYPE_NAME, [self::$form, 'dispatch']);
 
       JQuery::ready("
-                    var mask = $('<img src=\"wp-content/themes/childreneyes/images/mask.png\"/>').css({position:'absolute', height:'98px', left:'12px', top: '49px'});
+                    var mask = $('<img src=\"".site_url()."/wp-content/themes/childreneyes/images/mask.png\"/>').css({position:'absolute', height:'98px', left:'12px', top: '49px'});
                     var cloned_link = $('#set-post-thumbnail').clone().html(mask);
                     $('#postimagediv').append(cloned_link);");
 

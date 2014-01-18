@@ -22,7 +22,7 @@ $children = new Child_Case($post);
 <td style="width:360px;">
 	<header class="case-header entry-header">
 
-	<?php echo '<img src="'.$children->image().'" alt="Kinderaugen"/>';  ?><img class='mask' src='wp-content/themes/childreneyes/images/mask.png' alt='maske'/>
+	<?php echo '<img src="'.$children->image().'" alt="Kinderaugen"/>';  ?><img class='mask' src='<?php echo site_url(); ?>/wp-content/themes/childreneyes/images/mask.png' alt='maske'/>
 		<div class="entry-meta">
 			<?php
 				edit_post_link( __( 'Edit', 'childreneyes' ), '<span class="edit-link">', '</span>' );
