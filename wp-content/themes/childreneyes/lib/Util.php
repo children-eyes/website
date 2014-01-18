@@ -45,4 +45,17 @@ class Util{
 
     return $attach_id;
   }
+
+  public static function url($path){
+    return site_url().'/'.$path;
+  }
+
+  public static function theme_url($path){
+    return self::url('wp-content/themes/childreneyes/'.$path);
+  }
+
+  public static function image_url($path){
+    return self::theme_url('images/'.$path);
+  }
+
 }

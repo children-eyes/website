@@ -89,7 +89,7 @@ class Child_Form extends Html_Form{
     && !isset($_REQUEST['until'])
     && isset($this->session->user_posted_case)
     && $this->session->user_posted_case + self::SUBMIT_DELAY > time())
-      $this->redirect('/submit?msg=wait&until='.($this->session->user_posted_case + self::SUBMIT_DELAY));
+      $this->redirect(Util::url('submit').'?msg=wait&until='.($this->session->user_posted_case + self::SUBMIT_DELAY));
   }
 
   public function dispatch_user_submitted($post_id){
@@ -102,7 +102,7 @@ class Child_Form extends Html_Form{
 
     if(!is_admin()
     && empty($_POST['name']))
-      $this->redirect('/submit?msg=missing_name');
+      $this->redirect(Util::url('submit').'?msg=missing_name');
 
     $this->session->user_posted_case = time();
 
@@ -113,6 +113,6 @@ class Child_Form extends Html_Form{
                  date('d.m.Y'),
                  'eyes');
 
-    $this->redirect('/submit?msg=wait_ok&until='.($this->session->user_posted_case + self::SUBMIT_DELAY));
+    $this->redirect(Util::url('submit').'?msg=wait_ok&until='.($this->session->user_posted_case + self::SUBMIT_DELAY));
   }
 }

@@ -22,7 +22,7 @@ class Child_App{
       add_action('save_post_'.Child_Case::POST_TYPE_NAME, [self::$form, 'dispatch']);
 
       JQuery::ready("
-                    var mask = $('<img src=\"".site_url()."/wp-content/themes/childreneyes/images/mask.png\"/>').css({position:'absolute', height:'98px', left:'12px', top: '49px'});
+                    var mask = $('<img src=\"".Util::image_url('mask.png')."\"/>').css({position:'absolute', height:'98px', left:'12px', top: '49px'});
                     var cloned_link = $('#set-post-thumbnail').clone().html(mask);
                     $('#postimagediv').append(cloned_link);");
 
@@ -34,7 +34,7 @@ class Child_App{
   }
 
   public static function enqueue_case_scripts_and_styles() {
-    wp_enqueue_style( 'children-eyes',  get_template_directory_uri().'/css/childeyes.css' );
+    wp_enqueue_style( 'children-eyes',  Util::theme_url('css/childeyes.css'));
 
     wp_enqueue_style( 'font-raleway', 'http://fonts.googleapis.com/css?family=Raleway%3Ar%2Cb%2Ci|Open+Sans%3Ar%2Cb%2Ci' );
   }
