@@ -7,7 +7,7 @@ class Child_Form extends Html_Form{
 
     $this->form_config = [
       'method' => 'POST',
-      'action' => '/?submit=case',
+      'action' => get_site_url().'/?submit=case',
       'name'   => 'childrenform'
     ];
 
@@ -79,7 +79,7 @@ class Child_Form extends Html_Form{
 
   const FORM_ANCHOR = 'childrenform';
   public function redirect($path){
-    header('Location: '.$path.'#'.self::FORM_ANCHOR);
+    header('Location: '.get_site_url().'/'.$path.'#'.self::FORM_ANCHOR);
     die();
   }
 

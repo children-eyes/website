@@ -69,7 +69,8 @@
   ?>
 	<div id="eye-cycler-wrapper">
 		<?php
-		#if ( function_exists( 'get_wp_parallax_content_slider' ) )
+
+		if ( function_exists( 'get_wp_parallax_content_slider' ) )
 			get_wp_parallax_content_slider();
 
 			?>
