@@ -35,6 +35,8 @@
 		<!-- IF not S_IS_BOT -->
 			<!-- IF S_DISPLAY_POST_INFO --><a class="button" href="{U_POST_NEW_TOPIC}">neues Thema</a>&nbsp;<!-- ENDIF -->
 			<!-- IF S_DISPLAY_REPLY_INFO --><a class="button" href="{U_POST_REPLY_TOPIC}">antworten</a><!-- ENDIF -->
+			<!--<a class="button" href="{U_PRINT_TOPIC}" title="{L_PRINT_TOPIC}">{L_PRINT_TOPIC}</a>
+			<a class="button" href="{U_EMAIL_TOPIC}" title="{L_EMAIL_TOPIC}">{L_EMAIL_TOPIC}</a>-->
 		<!-- ENDIF -->
 		</td>
 		<!-- IF TOTAL_POSTS -->
@@ -46,24 +48,7 @@
 	</table>
 
 	<table class="tablebg" width="100%" cellspacing="1">
-	<tr>
-		<td class="cat">
-			<table width="100%" cellspacing="0">
-			<tr>
-				<td class="nav" nowrap="nowrap">&nbsp;
-				<!-- IF not S_IS_BOT -->
-					<!-- IF U_WATCH_TOPIC --><a href="{U_WATCH_TOPIC}" title="{L_WATCH_TOPIC}">{L_WATCH_TOPIC}</a><!-- IF U_PRINT_TOPIC or U_EMAIL_TOPIC or U_BUMP_TOPIC or U_BOOKMARK_TOPIC --> | <!-- ENDIF --><!-- ENDIF -->
-					<!-- IF U_BOOKMARK_TOPIC --><a href="{U_BOOKMARK_TOPIC}" title="{L_BOOKMARK_TOPIC}">{L_BOOKMARK_TOPIC}</a><!-- IF U_PRINT_TOPIC or U_EMAIL_TOPIC or U_BUMP_TOPIC --> | <!-- ENDIF --><!-- ENDIF -->
-					<!-- IF U_PRINT_TOPIC --><a href="{U_PRINT_TOPIC}" title="{L_PRINT_TOPIC}">{L_PRINT_TOPIC}</a><!-- IF U_EMAIL_TOPIC or U_BUMP_TOPIC --> | <!-- ENDIF --><!-- ENDIF -->
-					<!-- IF U_EMAIL_TOPIC --><a href="{U_EMAIL_TOPIC}" title="{L_EMAIL_TOPIC}">{L_EMAIL_TOPIC}</a><!-- IF U_BUMP_TOPIC --> | <!-- ENDIF --><!-- ENDIF -->
-					<!-- IF U_BUMP_TOPIC --><a href="{U_BUMP_TOPIC}" title="{L_BUMP_TOPIC}">{L_BUMP_TOPIC}</a><!-- ENDIF -->
-				<!-- ENDIF -->
-				</td>
-				<td class="nav" align="{S_CONTENT_FLOW_END}" nowrap="nowrap"><a href="{U_VIEW_OLDER_TOPIC}">{L_VIEW_PREVIOUS_TOPIC}</a><!-- IF U_VIEW_UNREAD_POST and not S_IS_BOT --> | <a href="{U_VIEW_UNREAD_POST}">{L_VIEW_UNREAD_POST}</a><!-- ENDIF --> | <a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a>&nbsp;</td>
-			</tr>
-			</table>
-		</td>
-	</tr>
+
 <!-- IF S_HAS_POLL -->
 	<tr>
 		<td class="row2" colspan="2" align="center"><br clear="all" />
@@ -285,7 +270,7 @@
 		<!-- IF postrow.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
 
 			<td class="profile"><strong><a href="#wrapheaderBBB">{L_BACK_TO_TOP}</a></strong></td>
-			<td><div class="gensmall" style="float: {S_CONTENT_FLOW_BEGIN};">&nbsp;<!-- IF postrow.U_POST_AUTHOR --><a href="{postrow.U_POST_AUTHOR}">{PROFILE_IMG}</a> <!-- ENDIF --> <!-- IF postrow.U_PM --><a href="{postrow.U_PM}">{PM_IMG}</a> <!-- ENDIF --> <!-- IF postrow.U_EMAIL --><a href="{postrow.U_EMAIL}">{EMAIL_IMG}</a> <!-- ENDIF -->&nbsp;</div> <div class="gensmall" style="float: {S_CONTENT_FLOW_END};"><!-- IF not S_IS_BOT --><!-- IF postrow.U_EDIT --><a href="{postrow.U_EDIT}">{EDIT_IMG}</a> <!-- ENDIF --> <!-- IF postrow.U_QUOTE --><a href="{postrow.U_QUOTE}">{QUOTE_IMG}</a> <!-- ENDIF --> <!-- ENDIF -->&nbsp;</div></td>
+			<td><div class="gensmall" style="float: {S_CONTENT_FLOW_BEGIN};">&nbsp;<!-- IF postrow.U_POST_AUTHOR --><a href="{postrow.U_POST_AUTHOR}">Author</a> <!-- ENDIF --> <!-- IF postrow.U_PM --><a href="{postrow.U_PM}">{PM_IMG}</a> <!-- ENDIF --> <!-- IF postrow.U_EMAIL --><a class="button" href="{postrow.U_EMAIL}">E-mail</a> <!-- ENDIF -->&nbsp;</div> <div class="gensmall" style="float: {S_CONTENT_FLOW_END};"><!-- IF not S_IS_BOT --><!-- IF postrow.U_EDIT --><a class="button" href="{postrow.U_EDIT}">bearbeiten</a> <!-- ENDIF --> <!-- IF postrow.U_QUOTE --><a class="button" href="{postrow.U_QUOTE}">zitieren</a> <!-- ENDIF --> <!-- ENDIF -->&nbsp;</div></td>
 	<!-- ENDIF -->
 		</tr>
 
@@ -294,14 +279,6 @@
 	</tr>
 	</table>
 <!-- END postrow -->
-
-	<!-- IF not S_IS_BOT -->
-	<table width="100%" cellspacing="1" class="tablebg">
-	<tr align="center">
-		<td class="cat"><form name="viewtopic" method="post" action="{S_TOPIC_ACTION}"><span class="gensmall">{L_DISPLAY_POSTS}:</span> {S_SELECT_SORT_DAYS}&nbsp;<span class="gensmall">{L_SORT_BY}</span> {S_SELECT_SORT_KEY} {S_SELECT_SORT_DIR}&nbsp;<input class="btnlite" type="submit" value="{L_GO}" name="sort" /></form></td>
-	</tr>
-	</table>
-	<!-- ENDIF -->
 
 	<table width="100%" cellspacing="1">
 	<tr>
