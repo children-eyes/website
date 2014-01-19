@@ -8,6 +8,13 @@ from git import *
 from fabric.operations import local as run_local
 import os as py_os
 
+#HELP
+# >fab production deploy
+# >fab beta deploy:master
+# >fab production db:export
+# >fab local db:import
+# >fab production rollback
+
 run_ssh = run
 os_env  = py_os.environ
 
@@ -49,7 +56,7 @@ env.stages = config.keys()
 #TODO generate stage methods 'local', 'beta', 'deploy' ans set env.stage if called
   #def local(): _set_stage_config('local')
 #actions
-def deploy():
+def deploy(stage='master'):
   _enshure_stage_isset()
   _check_not_stage('local')
 
@@ -57,11 +64,16 @@ def deploy():
   #TODO sync with ftp
 
 def db(command):
+  _enshure_stage_isset()
   if 'export' in command:
     run('...')
   elif 'import' in command:
     run('...')
 
+def rollback():
+  _enshure_stage_isset()
+  _check_not_stage('local')
+  #TODO sync last deployed folder or before deploy make a local synced copy
 
 #helper
 def _enshure_stage_isset():
