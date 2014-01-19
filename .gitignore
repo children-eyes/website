@@ -13,3 +13,4 @@ wp-content/backups/
 sitemap.xml.gz
 forum/cache
 forum/config.php
+wp-content/themes/childreneyes/images/.DS_Store
