@@ -59,7 +59,7 @@ html body {
   background-repeat: no-repeat;
   background-size:cover;
   -moz-background-size: cover;
-  padding-top:200px;
+  padding-top:270px;
   padding-bottom:120px;
 
 }
@@ -395,7 +395,7 @@ body .button,
   }
 
   html body{
-    padding-top:250px;
+    padding-top:340px;
     background-image: url("../images/background-medium.jpg");
   }
 
