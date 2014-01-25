@@ -19,6 +19,12 @@ body .entry-content h2 a:visited{
   color: #51545C;
 }
 
+body .site-navigation .current_page_item > a,
+body .site-navigation .current_page_ancestor > a,
+body .site-navigation .current-menu-item > a,
+body .site-navigation .current-menu-ancestor > a{
+  font-weight: normal;
+}
 
 body .site-content .entry-header,
 body .site-content .entry-content,
@@ -219,7 +225,7 @@ body.list-view .site-content .hentry{
 /* paralaxx overrides */
 #eye-cycler-wrapper{
   position:absolute;
-  top:-250px;
+  top:-290px;
   left:0;
   width:100%;
   z-index:3;
@@ -240,14 +246,20 @@ body .da-slide h2{
 body .da-slide p{
   margin-left: 20px;
   top: 115px;
-  color:#ccc;
   line-height: 17px;
-  height: 85px;
+  height: 125px;
+  color:#ddd;
+  text-shadow: 2px 2px 3px #000;
 }
 
 #eye-cycler-wrapper a, #eye-cycler-wrapper a:hover, #eye-cycler-wrapper a:active, #eye-cycler-wrapper a:visited{
-  color:#ccc;
+  color:#ddd;
   text-decoration: none;
+  text-shadow: 2px 2px 3px #000;
+}
+
+#eye-cycler-wrapper a.button{
+  text-shadow: none;
 }
 
 #eye-cycler-wrapper a.button, #eye-cycler-wrapper a.button:hover, #eye-cycler-wrapper a.button:active, #eye-cycler-wrapper a.button:visited{
@@ -274,9 +286,9 @@ body .da-slide .da-img{
 }
 
 .children img.mask{
-  left: 30px;
+  left: 0;
   position: absolute;
-  top: 24px;
+  top: 0;
 }
 
 body .da-img{
@@ -363,6 +375,27 @@ body .button,
     padding: 0;
   }
 
+body .type-children img{
+  height:60px;
+}
+
+body .site-content .entry-header.case-header{
+  text-align: left;
+  padding: 0;
+}
+
+body .case-content{
+  font-size:12px;
+}
+
+article.children td{
+  width:300px;
+}
+
+article.children table{
+  max-width:900px;
+  margin: 0 auto;
+}
 
 /* media dependent*/
 @media screen and (min-width: 480px) {
@@ -373,6 +406,14 @@ body .button,
   .da-img img{
     height: 100px;
   }
+
+  body .type-children img{
+    height:100px;
+  }
+
+  body .case-content{
+    font-size:16px;
+  }
 }
 
 @media screen and (min-width: 767px) {
@@ -381,7 +422,11 @@ body .button,
   }
 
   body .da-slide p{
-    height: 90px;
+    height: 100px;
+  }
+
+  body .type-children img{
+    height:116px;
   }
 }
 
@@ -391,6 +436,10 @@ body .button,
   }
 
   .da-img img{
+    height:150px;
+  }
+
+  body .type-children img{
     height:150px;
   }
 
@@ -437,7 +486,7 @@ body .button,
     font-size: 26px;
     line-height: 30px;
     top: 170px;
-    height:130px;
+    height:170px;
   }
 
   body .da-slider{
@@ -447,6 +496,4 @@ body .button,
   body .da-slide .da-img{
     top:40px;
   }
-}
-
 }

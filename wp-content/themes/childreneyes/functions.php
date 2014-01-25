@@ -108,14 +108,14 @@ function childreneyes_setup() {
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
-	) );
+	#add_theme_support( 'post-formats', array(
+	#	'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
+	#) );
 
 	// This theme allows users to set a custom background.
-	add_theme_support( 'custom-background', apply_filters( 'childreneyes_custom_background_args', array(
-		'default-color' => 'f5f5f5',
-	) ) );
+	#add_theme_support( 'custom-background', apply_filters( 'childreneyes_custom_background_args', array(
+	#	'default-color' => 'f5f5f5',
+	#) ) );
 
 	// Add support for featured content.
 	add_theme_support( 'featured-content', array(
@@ -229,6 +229,7 @@ function childreneyes_font_url() {
 	if ( 'off' !== _x( 'on', 'Lato font: on or off', 'childreneyes' ) ) {
 		$font_url = add_query_arg( 'family', urlencode( 'Lato:300,400,700,900,300italic,400italic,700italic' ), "//fonts.googleapis.com/css" );
 	}
+	#TODO use that from App.php
 
 	return $font_url;
 }

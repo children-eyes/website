@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: WP Parallax Content Slider
+ * Plugin Name: dont update!!! WP Parallax Content Slider
  * Plugin URI: http://jltweb.info/realisations/wp-parallax-content-plugin/
  * Description: A customizable JQuery content slider with CSS3 animations and parallax effects
  * Author URI: http://jltweb.info/

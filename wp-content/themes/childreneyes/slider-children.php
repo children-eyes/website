@@ -4,8 +4,9 @@
 
 	$childrens_url = Util::url('children');
 
-	$textcontent = "<a href='".$childrens_url."'>Vermisst seit: <strong>" . $childcase->missed_days . " Tagen</strong><br>";
-	$textcontent.= "Anwaltskosten: <strong>" . $childcase->costs_euro . "€ </strong><br><br></a>";
+	$textcontent = "<a href='".$childrens_url."'>Vermisst seit: " . $childcase->missed_days . " Tagen<br>";
+	$textcontent.= "Steuerzahlerkosten: " . $childcase->costs_taxpayer . "€ <br></a>";
+	$textcontent.= "Anwaltskosten: " . $childcase->costs_euro . "€ <br><br></a>";
 	$textcontent.= "<a class='button' href='".$childrens_url."'>Übersicht der Fälle</a>";
 
 

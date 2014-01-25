@@ -6,6 +6,7 @@ class Child_Case{
   const METAKEY_COSTS      = 'costs';
   const KEY_MISSED_DAYS    = 'missed_days';
   const KEY_COSTS_EURO     = 'costs_euro';
+  const KEY_COSTS_TAXPAYER = 'costs_taxpayer';
   const POST_TYPE_NAME     = 'children';
 
   protected static $meta_keys = [self::METAKEY_COSTS, self::METAKEY_DATE, self::METAKEY_MISSED];
@@ -37,7 +38,7 @@ class Child_Case{
   }
 
   public function __get($name){
-    if(in_array($name, ['missed_days', 'missing', 'costs_euro', 'costs', 'date', 'image'])){
+    if(in_array($name, ['missed_days', 'missing', 'costs_euro', 'costs', 'date', 'image', 'costs_taxpayer'])){
 
       $this->load_meta();
 
@@ -47,6 +48,7 @@ class Child_Case{
     return isset($this->post->$name) ? $this->post->$name : null;
   }
 
+  const COST_PER_DAY_FOR_TAXPAYER = 100;
   protected function load_meta(){
     if(isset($this->meta))
       return ;
@@ -56,6 +58,7 @@ class Child_Case{
 
     $this->meta[self::KEY_MISSED_DAYS]    = self::map_missed_2_days($this->meta[self::METAKEY_MISSED], $this->meta[self::METAKEY_DATE]);
     $this->meta[self::KEY_COSTS_EURO]     = self::map_costs_2_euro($this->meta[self::METAKEY_COSTS]);
+    $this->meta[self::KEY_COSTS_TAXPAYER] = $this->meta[self::KEY_MISSED_DAYS] * self::COST_PER_DAY_FOR_TAXPAYER;
   }
 
   public static function map_costs_2_euro($key){

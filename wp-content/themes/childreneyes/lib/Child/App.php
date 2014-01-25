@@ -22,9 +22,11 @@ class Child_App{
       add_action('save_post_'.Child_Case::POST_TYPE_NAME, [self::$form, 'dispatch']);
 
       JQuery::ready("
-                    var mask = $('<img src=\"".Util::image_url('mask.png')."\"/>').css({position:'absolute', height:'98px', left:'12px', top: '49px'});
-                    var cloned_link = $('#set-post-thumbnail').clone().html(mask);
-                    $('#postimagediv').append(cloned_link);");
+                    if($('a#set-post-thumbnail > img').length){
+                      var mask = $('<img src=\"".Util::image_url('mask.png')."\"/>').css({position:'absolute', height:'98px', left:'12px', top: '49px'});
+                      var cloned_link = $('#set-post-thumbnail').clone().html(mask);
+                      $('#postimagediv').append(cloned_link);
+                    }");
 
       JQuery::ready("$('.attachment-post-thumbnail').css({height: '98px'})");
       add_filter('admin_footer', function(){

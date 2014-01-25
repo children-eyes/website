@@ -19,10 +19,10 @@ $children = new Child_Case($post);
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <table>
 <tr>
-<td style="width:360px;">
+<td>
 	<header class="case-header entry-header">
 
-	<?php echo '<img src="'.$children->image().'" alt="Kinderaugen"/>';  ?><img class='mask' src='<?php echo site_url(); ?>/wp-content/themes/childreneyes/images/mask.png' alt='maske'/>
+	<?php echo '<img src="'.$children->image().'" alt="Kinderaugen"/>';  ?><br/><img class='mask' src='<?php echo site_url(); ?>/wp-content/themes/childreneyes/images/mask.png' alt='maske'/>
 		<div class="entry-meta">
 			<?php
 				edit_post_link( __( 'Edit', 'childreneyes' ), '<span class="edit-link">', '</span>' );
@@ -35,10 +35,11 @@ $children = new Child_Case($post);
 
 		<?php
 
-		  echo '<h1 class="entry-title">'.$children->name.'</h1>' ;
+		  echo '<h2 class="entry-title">'.$children->name.'</h2>' ;
 
-			echo 'Kosten bis zum '.$children->date.': '.$children->costs_euro.'€ <br/>';
-			echo 'vermisst seit: '.$children->missed_days.' Tagen <br/>';
+		  echo 'vermisst seit: '.$children->missed_days.' Tagen <br/>';
+			echo 'Steuerzahlerkosten: '.$children->costs_taxpayer.'€ <br/>';
+			echo 'Anwaltskosten: '.$children->costs_euro.'€ <br/>';
 			echo 'Kommentar: <i>'.$children->comment.'</i>';
 
 			wp_link_pages( array(
