@@ -3,7 +3,7 @@
 <div id="pagecontent">
 
 	<form method="get" action="{S_SEARCH_ACTION}">
-	
+
 	<table class="tablebg" width="100%" cellspacing="1">
 	<tr>
 		<th colspan="4">{L_SEARCH_QUERY}</th>
@@ -42,30 +42,12 @@
 		<td class="row2" nowrap="nowrap"><select name="ch">{S_CHARACTER_OPTIONS}</select> <span class="genmed">{L_POST_CHARACTERS}</span></td>
 	</tr>
 	<tr>
-		<td class="cat" colspan="4" align="center">{S_HIDDEN_FIELDS}<input class="btnmain" name="submit" type="submit" value="{L_SEARCH}" />&nbsp;&nbsp;<input class="btnlite" type="reset" value="{L_RESET}" /></td>
+		<td class="cat" colspan="4" align="center" style="padding-top:15px;">{S_HIDDEN_FIELDS}<input class="btnmain" name="submit" type="submit" value="{L_SEARCH}" />&nbsp;&nbsp;<input class="btnlite" type="reset" value="{L_RESET}" /></td>
 	</tr>
 	</table>
-	
+
 	</form>
 
-	<br clear="all" />
-
-	<!-- IF .recentsearch -->
-	<table class="tablebg" width="100%" cellspacing="1">
-	<tr>
-		<th colspan="2">{L_RECENT_SEARCHES}</th>
-	</tr>
-	<!-- BEGIN recentsearch -->
-		<!-- IF recentsearch.S_ROW_COUNT is even --><tr class="row2"><!-- ELSE --><tr class="row1"><!-- ENDIF -->
-
-			<td class="genmed" style="padding: 4px;" width="70%"><a href="{recentsearch.U_KEYWORDS}">{recentsearch.KEYWORDS}</a></td>
-			<td class="genmed" style="padding: 4px;" width="30%" align="center">{recentsearch.TIME}</td>
-		</tr>
-	<!-- END recentsearch -->
-	</table>
-
-	<br clear="all" />
-	<!-- ENDIF -->
 
 	</div>
 

@@ -3389,7 +3389,7 @@ function parse_cfg_file($filename, $lines = false)
 
 		$parsed_items[$key] = $value;
 	}
-	
+
 	if (isset($parsed_items['inherit_from']) && isset($parsed_items['name']) && $parsed_items['inherit_from'] == $parsed_items['name'])
 	{
 		unset($parsed_items['inherit_from']);
@@ -4498,12 +4498,12 @@ function page_header($page_title = '', $display_online_list = true, $item_id = 0
 	if ($user->data['user_id'] != ANONYMOUS)
 	{
 		$u_login_logout = append_sid("{$phpbb_root_path}ucp.$phpEx", 'mode=logout', true, $user->session_id);
-		$l_login_logout = sprintf($user->lang['LOGOUT_USER'], $user->data['username']);
+		$l_login_logout = 'logout';//;sprintf($user->lang['LOGOUT_USER'], $user->data['username']);
 	}
 	else
 	{
 		$u_login_logout = append_sid("{$phpbb_root_path}ucp.$phpEx", 'mode=login');
-		$l_login_logout = $user->lang['LOGIN'];
+		$l_login_logout = 'login';//$user->lang['LOGIN'];
 	}
 
 	// Last visit date/time

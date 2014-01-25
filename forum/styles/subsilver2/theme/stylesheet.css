@@ -8,15 +8,58 @@
 */
 
 /*child hacks*/
+body a, body a:link, body a:visited, body a:hover,
+body a.forumlink, body a.topictitle,
+body a.forumlink:link, body a.topictitle:link,
+body a.forumlink:hover, body a.topictitle:hover,
+body a.forumlink:visited, body a.topictitle:visited   {
+    color: #245e10;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+body th{
+  background: none;
+  text-align:left;
+  padding:0;
+}
+
+body table.tablebg th:first-child{
+  font-size:30px;
+}
+
+
+body th table{
+  font-size:16px;
+}
+
+body td.profile {
+    padding: 4px 4px 4px 20px;
+}
+
+body table.tablebg td{
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: inset 0 0 25px 1px rgba( 0, 0, 0, 0.1 ), inset 0 -1px 0 rgba( 0, 0, 0, 0.1 );
+  -moz-box-shadow: inset 0 0 25px 1px rgba( 0, 0, 0, 0.1 ), inset 0 -1px 0 rgba( 0, 0, 0, 0.1 );
+  box-shadow: inset 0 0 25px 1px rgba( 0, 0, 0, 0.1 ), inset 0 -1px 0 rgba( 0, 0, 0, 0.1 );
+}
+
+body table.tablebg td > table td, body table.tablebg th > table td{
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
 body p.breadcrumbs {
-  color: #eee;
-  font-size: 63px;
+  color: #EEEEEE;
+  font-size: 29px;
   font-style: italic;
   font-weight: bold;
   left: 3px;
   margin: 0 0 12px;
   position: absolute;
-  top: 161px;
+  top: 198px;
 }
 
 #pageheader > h2 > a{
@@ -54,11 +97,11 @@ body h4 {
 }
 
 body .row1 {
-  background-color: #E6F3E3;
+  background-color: #f1f9e7;
 }
 
 body .row2 {
-  background-color: #CFF2C7;
+  background-color: #E6F3E3;
 }
 
 #logodesc {
@@ -118,10 +161,38 @@ body #wrapcentre{
   border-top-right-radius: 60px;
 }
 
+.postbody {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+body ul{
+  margin-
+}
+
+input[type="text"], textarea, select[multiple]{
+  border: 1px solid #DDDDDD;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #F6F6F6 0%, #FDFDFD 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  padding:3px;
+}
+
+input[type="text"]:focus, textarea:focus, select[multiple]:focus, option:focus {
+    border: 1px solid #999999;
+    box-shadow: 0 0 5px #D0D0D0;
+}
+
+option:focus{
+  color:#d0d0d0;
+}
 
 /* buttons */
+body th a:hover{
+  text-decoration: none;
+}
+
 body .button,
-body a.button,
+body a.button, body a.button:visited,
   body button,
   body input[type="submit"],
   body input[type="file"],
@@ -146,7 +217,7 @@ body a.button,
     font-weight: bold;
     text-decoration: none;
     text-transform: none;
-    text-shadow: 0 1px rgba(255, 255, 255, .75);
+    text-shadow: none;
     cursor: pointer;
     margin-bottom: 3px;
     line-height: normal;
@@ -201,23 +272,11 @@ body a.button,
     padding: 0;
   }
 
-
-
-
-
-
-
-
-
 /*menu*/
 #menubar {
   position: absolute;
   right: 20px;
   top: -48px;
-}
-
-
-#menubar {
 	float: right;
 	font-size: 11px;
 	margin: 0 1px 0 -12px;
@@ -383,10 +442,10 @@ body h2{
 }
 
 html body, body input, body textarea, body .entry-content {
-    font: 16px/1.5em Open Sans;
+    font: 16px/1.5 "open sans",arial,sans-serif;
 }
 html body, body input, body textarea {
-    color: #888888;
+    color: #555;
     font: 16px/1.5 "open sans",arial,sans-serif;
 }
 
@@ -404,6 +463,45 @@ body .site-footer {
 }
 
 
+
+
+
+
+/* media dependent*/
+@media screen and (min-width: 767px) {
+  body p.breadcrumbs {
+    font-size: 33px;
+    top:194px;
+  }
+}
+
+@media screen and (min-width: 1031px) {
+  body p.breadcrumbs {
+    font-size: 43px;
+    top:183px;
+  }
+}
+
+
+
+@media screen and (min-width: 1800px) {
+  body p.breadcrumbs {
+    font-size: 63px;
+    top:231px;
+  }
+
+  html body{
+    padding-top: 300px;
+    padding-bottom: 220px;
+  }
+}
+
+
+
+
+
+
+
 /* Layout
  ------------ */
 * {
@@ -418,7 +516,7 @@ html {
 
 body {
 	/* Text-Sizing with ems: http://www.clagnut.com/blog/348/ */
-	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+	font: 16px/1.5 "open sans",arial,sans-serif;
 	color: #323D4F;
 	background-color: #FFFFFF;
 	font-size: 62.5%; /* This sets the default font size to be equivalent to 10px */
@@ -614,12 +712,6 @@ p.topicdetails {
 	color: #000000;
 }
 
-.postbody {
-	font-size: 1.3em;
-	line-height: 1.4em;
-	font-family: "Lucida Grande", "Trebuchet MS", Helvetica, Arial, sans-serif;
-}
-
 .postbody li, ol, ul {
 	margin: 0 0 0 1.5em;
 }
@@ -809,7 +901,7 @@ a.topictitle:visited {
 
 th a,
 th a:visited {
-	color: #FFA34F !important;
+	color: #FFA34F;
 	text-decoration: none;
 }
 
