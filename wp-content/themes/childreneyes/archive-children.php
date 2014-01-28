@@ -36,7 +36,7 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 				<div class="entry-content">
-					All diese Augen gehören betroffenen Kindern! Insgesamt <?php echo wp_count_posts('children')->publish; ?> Augenpaare.
+					All diese Augen gehören betroffenen Kindern! Insgesamt <strong><?php echo wp_count_posts('children')->publish; ?></strong> Augenpaare.
 
 					...<a href="<?php echo Util::url('submit'); ?>">Möchtest du dein(e) vermissten Augen auch hochladen?</a>
 				</div>
